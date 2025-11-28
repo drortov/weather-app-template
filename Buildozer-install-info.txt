@@ -1,0 +1,15 @@
+Шаг 1: Открываем WSL в Windows
+Win + R → cmd → wsl
+
+Шаг 2: Ставим зависимости: копируем по одной строке, вставляем и нажимаем Enter
+sudo apt update
+sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
+
+Шаг 3: Ставим Buildozer. Копируем - вставляем и нажимаем Enter
+
+pip3 install --user --upgrade buildozer
+
+Шаг 4: Добавляем в PATH, Rопируем по одной строке, вставляем и нажимаем Enter
+
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
