@@ -1,0 +1,43 @@
+#TODO: 'запускаем в терминале ubuntu:'
+pip3 install --user --upgrade --break-system-packages buildozer
+#TODO: 'запускаем в терминале ubuntu:'
+
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
+#TODO: 'Создаем на диске c:/ папку Android Переносим файл weather-app.py  в папку и переименовываем в main.py'
+#TODO: 'запускаем в терминале ubuntu поочереди команды:
+  sudo apt install -y cython3
+  pip3 install --user --upgrade --break-system-packages cython
+#TODO 'Переходим в папку Android
+  cd c:/Android
+#TODO 'запускаем в терминале
+  buildozer init
+# 'После этой команды в папке появляется файл buildozer.spec
+#TODO 'набираем в терминале 
+  nano buildozer.spec
+# удаляем все и приводим к виду: 
+
+[buildozer]
+requirements.allow_external = true
+
+[app]
+title = Погодное Приложение
+package.name = weatherapp
+package.domain = org.kivy
+source.dir = .
+source.include_exts = py,png,jpg,kv,atlas,ttf
+version = 0.1
+requirements = python3,kivy,requests
+android.permissions = INTERNET
+
+#TODO 'запускаем в терминале ubuntu команду
+  sudo mv /usr/lib/python3.11/EXTERNALLY-MANAGED /usr/lib/python3.11/EXTERNALLY-MANAGED.bak
+# или если следующая команда выдаст ошибку то
+# sudo rm /usr/lib/python3.9/EXTERNALLY-MANAGED
+# sudo rm /usr/lib/python3.10/EXTERNALLY-MANAGED
+#TODO 'запускаем в терминале ubuntu команду сборки:
+  buildozer -v android debug
+
+
+  
