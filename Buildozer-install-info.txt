@@ -7,7 +7,9 @@ sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pk
 
 Шаг 3: Ставим Buildozer. Копируем - вставляем и нажимаем Enter
 
-pip3 install --user --upgrade buildozer
+# pip3 install --user --upgrade buildozer
+Вместо предыдущей команды запускаем:
+pip3 install --user --upgrade --break-system-packages buildozer
 
 Шаг 4: Добавляем в PATH, Rопируем по одной строке, вставляем и нажимаем Enter
 
